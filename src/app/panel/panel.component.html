@@ -1,13 +1,21 @@
 <ng-container *ngIf="dataReady">
-<div>EuroJackpot Results for {{winners.last.date.dayOfTheWeek}} {{winners.last.date.day}} {{winners.last.date.month}} {{winners.last.date.year}}</div>
-<div>
-  <span *ngFor="let key of (winners.last.numbers | keys)">{{winners.last.numbers[key]}} </span>
-  <span *ngFor="let key of (winners.last.euroNumbers | keys)">{{winners.last.euroNumbers[key]}} </span>
+  <div class="header"><span class="header__title">EuroJackpot</span> Results for {{winners.last.date.dayOfTheWeek}} {{winners.last.date.day}} {{winners.last.date.month}} {{winners.last.date.year}}</div>
+<div class="row">
+  <span class="number" *ngFor="let key of (winners.last.numbers | keys)">{{winners.last.numbers[key]}} </span>
+  <span class="number euronumber" *ngFor="let key of (winners.last.euroNumbers | keys)">{{winners.last.euroNumbers[key]}} </span>
 </div>
-<div>
-  <div><span *ngFor="let header of headers">{{header}}</span></div>
-</div>
-  <div>
-    <div *ngFor="let tier of tiers">{{tier.tier}} {{tier.match}} {{tier.winners}} {{tier.prize}}</div>
+<div class="table">
+  <div class="table__header">
+    <div class="table__cell table__cell--small">Tier</div>
+    <div class="table__cell table__cell--large">Match</div>
+    <div class="table__cell table__cell--large">Winners</div>
+    <div class="table__cell table__cell--large">Amount</div>
   </div>
+  <div  class="table__row" *ngFor="let tier of tiers">
+    <div class="table__cell table__cell--small">{{tier.tier}}</div>
+    <div class="table__cell table__cell--large">{{tier.match}}</div>
+    <div class="table__cell table__cell--large">{{tier.winners}}x</div>
+    <div class="table__cell table__cell--large">€{{tier.prize}}</div>
+  </div>
+</div>
 </ng-container>

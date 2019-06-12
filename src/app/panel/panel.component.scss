@@ -1,0 +1,76 @@
+$color-brown: #815422;
+$color-grey: #d9deda;
+
+:host {
+  font-family: FF Daxline Pro,Geneva,Trebuchet MS,Tahoma,Verdana,sans-serif;
+}
+
+.header {
+  padding: 14px 0;
+  font-weight: 200;
+}
+
+.header__title {
+  color: $color-brown
+}
+
+.row {
+  display: flex;
+  margin-bottom: 7px;
+
+  .number {
+    font-size: 17px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid $color-grey;
+    border-radius: 50%;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .euronumber {
+    border: 1px solid $color-brown;
+  }
+}
+
+.table {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  border: solid 1px $color-grey;
+}
+
+.table__header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px $color-grey;
+  font-weight: 500;
+}
+
+.table__row {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $color-grey;
+  }
+}
+
+.table__cell {
+  text-align: left;
+  padding: 14px 21px;
+  display: flex;
+  align-items: center;
+}
+
+.table__cell--small {
+  width: 10%;
+}
+
+.table__cell--large {
+  width: 30%;
+}
