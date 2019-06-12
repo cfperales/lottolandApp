@@ -11,11 +11,6 @@
     <div class="table__cell table__cell--large">Winners</div>
     <div class="table__cell table__cell--large">Amount</div>
   </div>
-  <div  class="table__row" *ngFor="let tier of tiers">
-    <div class="table__cell table__cell--small">{{tier.tier}}</div>
-    <div class="table__cell table__cell--large">{{tier.match}}</div>
-    <div class="table__cell table__cell--large">{{tier.winners}}x</div>
-    <div class="table__cell table__cell--large">€{{tier.prize}}</div>
-  </div>
+  <ng-container *ngFor="let tier of tiers"><app-table-row [tier]="tier"></app-table-row></ng-container>
 </div>
 </ng-container>

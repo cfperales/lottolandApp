@@ -37,28 +37,3 @@ $color-grey: #d9deda;
   border-bottom: solid 1px $color-grey;
   font-weight: 500;
 }
-
-.table__row {
-  display: flex;
-  flex-direction: row;
-  font-weight: 500;
-
-  &:not(:last-child) {
-    border-bottom: solid 1px $color-grey;
-  }
-}
-
-.table__cell {
-  text-align: left;
-  padding: 14px 21px;
-  display: flex;
-  align-items: center;
-}
-
-.table__cell--small {
-  width: 10%;
-}
-
-.table__cell--large {
-  width: 30%;
-}

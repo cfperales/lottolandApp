@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+.table__cell {
+  text-align: left;
+  padding: 14px 21px;
+  display: flex;
+  align-items: center;
+}
+
+.table__cell--small {
+  width: 10%;
+}
+
+.table__cell--large {
+  width: 30%;
+}

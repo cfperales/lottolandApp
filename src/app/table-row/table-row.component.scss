@@ -1,0 +1,11 @@
+$color-grey: #d9deda;
+
+:host {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $color-grey;
+  }
+}
