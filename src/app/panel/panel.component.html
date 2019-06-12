@@ -1,8 +1,8 @@
 <ng-container *ngIf="dataReady">
   <div class="header"><span class="header__title">EuroJackpot</span> Results for {{winners.last.date.dayOfTheWeek}} {{winners.last.date.day}} {{winners.last.date.month}} {{winners.last.date.year}}</div>
-<div class="row">
-  <span class="number" *ngFor="let key of (winners.last.numbers | keys)">{{winners.last.numbers[key]}} </span>
-  <span class="number euronumber" *ngFor="let key of (winners.last.euroNumbers | keys)">{{winners.last.euroNumbers[key]}} </span>
+<div class="winner-numbers">
+  <ng-container *ngFor="let key of (winners.last.numbers | keys)"><app-number [number]="winners.last.numbers[key]" [euronumber]="false"></app-number></ng-container>
+  <ng-container *ngFor="let key of (winners.last.euroNumbers | keys)"><app-number [number]="winners.last.euroNumbers[key]" [euronumber]="true"></app-number></ng-container>
 </div>
 <div class="table">
   <div class="table__header">

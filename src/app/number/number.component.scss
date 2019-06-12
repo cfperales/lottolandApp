@@ -1,0 +1,14 @@
+$color-brown: #815422;
+$color-grey: #d9deda;
+
+:host {
+  font-size: 17px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid $color-grey;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  width: 35px;
+  height: 35px;
+}

@@ -13,7 +13,6 @@ import {matchLabels, tiersLabels} from './panel.utils';
 export class PanelComponent implements OnInit {
   public dataReady = false;
   public winners: WinnersInterface;
-  public headers: string[] = ['Tier', 'Match', 'Winners', 'Amount'];
   public tiers: OddModelInterface[];
 
   constructor(

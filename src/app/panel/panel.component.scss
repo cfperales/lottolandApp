@@ -14,21 +14,9 @@ $color-grey: #d9deda;
   color: $color-brown
 }
 
-.row {
+.winner-numbers {
   display: flex;
   margin-bottom: 7px;
-
-  .number {
-    font-size: 17px;
-    line-height: 35px;
-    text-align: center;
-    border: 1px solid $color-grey;
-    border-radius: 50%;
-    margin-right: 7px;
-    margin-bottom: 7px;
-    width: 35px;
-    height: 35px;
-  }
 
   .euronumber {
     border: 1px solid $color-brown;
