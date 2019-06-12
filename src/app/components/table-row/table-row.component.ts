@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {OddModelInterface} from '../interfaces/winners.model';
+import {OddModelInterface} from '../../interfaces/winners.model';
 
 @Component({
   selector: 'app-table-row',

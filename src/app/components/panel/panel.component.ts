@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {EuroJackpotService} from '../services/euro-jackpot.service';
-import {WinnersInterface} from '../interfaces/winners.interface';
-import {OddModelInterface} from '../interfaces/winners.model';
+import {EuroJackpotService} from '../../services/euro-jackpot.service';
+import {WinnersInterface} from '../../interfaces/winners.interface';
+import {OddModelInterface} from '../../interfaces/winners.model';
 import {generateDate, matchLabels, tiersLabels} from './panel.utils';
 import {generate} from 'rxjs';
 
