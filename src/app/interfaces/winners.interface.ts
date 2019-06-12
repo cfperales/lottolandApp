@@ -23,14 +23,14 @@ interface RaffleLast extends RaffleNext {
   odds: OddsInterface;
 }
 
-interface DateInterface {
+export interface DateInterface {
   full: string;
   day: number;
   month: number;
   year: number;
   hour: number;
   minute: number;
-  dayOfTheWeek: number;
+  dayOfWeek: number;
 }
 
 interface EuroNumbersInterface {

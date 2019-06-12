@@ -1,5 +1,5 @@
 <ng-container *ngIf="dataReady">
-  <div class="header"><span class="header__title">EuroJackpot</span> Results for {{winners.last.date.dayOfTheWeek}} {{winners.last.date.day}} {{winners.last.date.month}} {{winners.last.date.year}}</div>
+  <div class="header"><span class="header__title">EuroJackpot</span> Results for {{date}}</div>
 <div class="winner-numbers">
   <ng-container *ngFor="let key of (winners.last.numbers | keys)"><app-number [number]="winners.last.numbers[key]" [euronumber]="false"></app-number></ng-container>
   <ng-container *ngFor="let key of (winners.last.euroNumbers | keys)"><app-number [number]="winners.last.euroNumbers[key]" [euronumber]="true"></app-number></ng-container>

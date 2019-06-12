@@ -2,7 +2,8 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@an
 import {EuroJackpotService} from '../services/euro-jackpot.service';
 import {WinnersInterface} from '../interfaces/winners.interface';
 import {OddModelInterface} from '../interfaces/winners.model';
-import {matchLabels, tiersLabels} from './panel.utils';
+import {generateDate, matchLabels, tiersLabels} from './panel.utils';
+import {generate} from 'rxjs';
 
 @Component({
   selector: 'app-panel',
@@ -14,6 +15,7 @@ export class PanelComponent implements OnInit {
   public dataReady = false;
   public winners: WinnersInterface;
   public tiers: OddModelInterface[];
+  public date: string;
 
   constructor(
     private readonly euroJackpotService: EuroJackpotService,
@@ -24,6 +26,7 @@ export class PanelComponent implements OnInit {
     this.euroJackpotService.getWinners().subscribe((response: WinnersInterface) => {
       this.dataReady = true;
       this.winners = response;
+      this.date = generateDate(this.winners.last.date);
       // rank0 needs to be removed as it is not displayed and does not have valid information
       delete this.winners.last.odds.rank0;
       // object built to display the results
