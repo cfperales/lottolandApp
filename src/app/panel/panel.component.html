@@ -1,3 +1,13 @@
-<p>
-  panel works!
-</p>
+<ng-container *ngIf="dataReady">
+<div>EuroJackpot Results for {{winners.last.date.dayOfTheWeek}} {{winners.last.date.day}} {{winners.last.date.month}} {{winners.last.date.year}}</div>
+<div>
+  <span *ngFor="let key of (winners.last.numbers | keys)">{{winners.last.numbers[key]}} </span>
+  <span *ngFor="let key of (winners.last.euroNumbers | keys)">{{winners.last.euroNumbers[key]}} </span>
+</div>
+<div>
+  <div><span *ngFor="let header of headers">{{header}}</span></div>
+</div>
+  <div>
+    <div *ngFor="let tier of tiers">{{tier.tier}} {{tier.match}} {{tier.winners}} {{tier.prize}}</div>
+  </div>
+</ng-container>

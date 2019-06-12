@@ -1,4 +1,4 @@
-export interface WinnersContract {
+export interface WinnersInterface {
   last: RaffleLast;
   next: RaffleNext;
 }
