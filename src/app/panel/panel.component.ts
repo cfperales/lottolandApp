@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {EuroJackpotService} from '../services/euro-jackpot.service';
 import {WinnersInterface} from '../interfaces/winners.interface';
 import {OddModelInterface} from '../interfaces/winners.model';
@@ -7,7 +7,8 @@ import {matchLabels, tiersLabels} from './panel.utils';
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.scss']
+  styleUrls: ['./panel.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PanelComponent implements OnInit {
   public dataReady = false;
@@ -16,7 +17,8 @@ export class PanelComponent implements OnInit {
   public tiers: OddModelInterface[];
 
   constructor(
-    private euroJackpotService: EuroJackpotService,
+    private readonly euroJackpotService: EuroJackpotService,
+    private readonly changeDetector: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {
@@ -33,6 +35,7 @@ export class PanelComponent implements OnInit {
           match: matchLabels[index],
         };
       });
+      this.changeDetector.detectChanges();
     });
   }
 }
