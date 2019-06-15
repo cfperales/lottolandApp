@@ -8,7 +8,7 @@ export interface WinnersInterface {
 
 interface RaffleNext {
   nr?: number;
-  currency?: string;
+  currency: string;
   date: DateInterface;
   closingDate?: string;
   lateClosingDate?: string;
