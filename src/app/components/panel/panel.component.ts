@@ -32,7 +32,7 @@ export class PanelComponent implements OnInit {
       this.tiers = Object.keys(this.winners.last.odds).map((key: string, index: number) => {
         return {
           ...this.winners.last.odds[key],
-          // We assume that will be always as many results as Tiers ans Matches. Otherwise will fail.
+          // We assume that will be always as many results as Tiers and Matches. Otherwise will fail.
           tier: tiersLabels[index],
           match: matchLabels[index],
         };

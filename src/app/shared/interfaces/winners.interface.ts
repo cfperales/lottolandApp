@@ -1,4 +1,5 @@
-// The date with the results is in last, I assumed that the data that is not displayed is not mandatory
+// The date with the results is in last, I assumed that the data that is not displayed in the screen is not mandatory
+// This will make easier the configuration of the mocks for testing purposes
 
 export interface WinnersInterface {
   last: RaffleLast;
