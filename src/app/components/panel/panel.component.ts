@@ -1,9 +1,8 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {EuroJackpotService} from '../../services/euro-jackpot.service';
-import {WinnersInterface} from '../../interfaces/winners.interface';
-import {OddModelInterface} from '../../interfaces/winners.model';
+import {WinnersInterface} from '../../shared/interfaces/winners.interface';
+import {OddModelInterface} from '../../shared/interfaces/winners.model';
 import {generateDate, matchLabels, tiersLabels} from './panel.utils';
-import {generate} from 'rxjs';
 
 @Component({
   selector: 'app-panel',
@@ -33,11 +32,14 @@ export class PanelComponent implements OnInit {
       this.tiers = Object.keys(this.winners.last.odds).map((key: string, index: number) => {
         return {
           ...this.winners.last.odds[key],
+          // We assume that will be always as many results as Tiers ans Matches. Otherwise will fail.
           tier: tiersLabels[index],
           match: matchLabels[index],
         };
       });
       this.changeDetector.detectChanges();
+    }, () => {
+      console.log('Error in call getWinners');
     });
   }
 }

@@ -1,5 +1,5 @@
 // Angular recommends put lowerCase name to constants as const reserved word is used
-import {DateInterface} from '../../interfaces/winners.interface';
+import {DateInterface} from '../../shared/interfaces/winners.interface';
 
 export const tiersLabels: string [] = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
 export const matchLabels: string [] = [

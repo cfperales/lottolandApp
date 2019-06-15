@@ -1,36 +1,38 @@
+// The date with the results is in last, I assumed that the data that is not displayed is not mandatory
+
 export interface WinnersInterface {
   last: RaffleLast;
-  next: RaffleNext;
+  next?: RaffleNext;
 }
 
 interface RaffleNext {
-  nr: number;
-  currency: string;
+  nr?: number;
+  currency?: string;
   date: DateInterface;
-  closingDate: string;
-  lateClosingDate: string;
-  drawingDate: string;
-  jackpot: string;
-  marketingJackpot: string;
-  specialMarketingJackpot: string;
-  climbedSince: number;
+  closingDate?: string;
+  lateClosingDate?: string;
+  drawingDate?: string;
+  jackpot?: string;
+  marketingJackpot?: string;
+  specialMarketingJackpot?: string;
+  climbedSince?: number;
 }
 
 interface RaffleLast extends RaffleNext {
   numbers: NumbersInterface;
   euroNumbers: EuroNumbersInterface;
-  Winners: number;
+  Winners?: number;
   odds: OddsInterface;
 }
 
 export interface DateInterface {
-  full: string;
+  full?: string;
   day: number;
   month: number;
   year: number;
-  hour: number;
-  minute: number;
-  dayOfWeek: number;
+  hour?: number;
+  minute?: number;
+  dayOfWeek: string;
 }
 
 interface EuroNumbersInterface {

@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {WinnersInterface} from '../interfaces/winners.interface';
+import {WinnersInterface} from '../shared/interfaces/winners.interface';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class EuroJackpotService {
 
   constructor(
@@ -13,6 +11,6 @@ export class EuroJackpotService {
   ) {}
 
   public getWinners(): Observable<WinnersInterface> {
-    return this.http.get<any>('https://www.lottoland.com/api/drawings/euroJackpot');
+    return this.http.get<WinnersInterface>('https://www.lottoland.com/api/drawings/euroJackpot');
   }
 }
