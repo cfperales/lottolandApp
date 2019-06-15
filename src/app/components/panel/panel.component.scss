@@ -3,6 +3,8 @@ $color-grey: #d9deda;
 
 :host {
   font-family: FF Daxline Pro,Geneva,Trebuchet MS,Tahoma,Verdana,sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {

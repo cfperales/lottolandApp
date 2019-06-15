@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {TableRowComponent} from '../table-row.component';
+import {FormatPrizePipe} from '../../../pipes/format-prize.pipe';
 
 describe('TableRowComponent', () => {
   let component: TableRowComponent;
@@ -8,7 +9,7 @@ describe('TableRowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TableRowComponent]
+      declarations: [TableRowComponent, FormatPrizePipe]
     })
     .compileComponents();
   }));
@@ -22,6 +23,7 @@ describe('TableRowComponent', () => {
       specialPrize: 0,
       tier: 'I',
       match: '5 Numbers + 2 Euronumbers',
+      currency: 'EUR',
     };
     fixture.detectChanges();
   });

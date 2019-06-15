@@ -9,6 +9,7 @@ import {EuroJackpotService} from '../../../services/euro-jackpot.service';
 import {FakeEuroJackpotService, mockWinnersResponse} from '../../../shared/test-utils/utils';
 import {generateDate} from '../panel.utils';
 import {DateInterface} from '../../../shared/interfaces/winners.interface';
+import {FormatPrizePipe} from '../../../pipes/format-prize.pipe';
 
 describe('PanelComponent - Backed call successful', () => {
   let component: PanelComponent;
@@ -17,7 +18,7 @@ describe('PanelComponent - Backed call successful', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PanelComponent, KeysPipe, NumberComponent, TableRowComponent],
+      declarations: [PanelComponent, FormatPrizePipe, KeysPipe, NumberComponent, TableRowComponent],
       providers: [
         HttpClient,
         HttpHandler,
@@ -66,7 +67,7 @@ describe('PanelComponent - BE call fails', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PanelComponent, KeysPipe, NumberComponent, TableRowComponent],
+      declarations: [PanelComponent, FormatPrizePipe, KeysPipe, NumberComponent, TableRowComponent],
       providers: [
         HttpClient,
         HttpHandler,

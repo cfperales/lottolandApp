@@ -6,15 +6,17 @@ import {NumberComponent} from '../components/number/number.component';
 import {TableRowComponent} from '../components/table-row/table-row.component';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 import {EuroJackpotService} from '../services/euro-jackpot.service';
+import {FormatPrizePipe} from '../pipes/format-prize.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        KeysPipe,
         AppComponent,
-        PanelComponent,
+        KeysPipe,
+        FormatPrizePipe,
         NumberComponent,
+        PanelComponent,
         TableRowComponent,
       ],
       providers: [

@@ -35,6 +35,7 @@ export class PanelComponent implements OnInit {
           // We assume that will be always as many results as Tiers and Matches. Otherwise will fail.
           tier: tiersLabels[index],
           match: matchLabels[index],
+          currency: this.winners.last.currency,
         };
       });
       this.changeDetector.detectChanges();

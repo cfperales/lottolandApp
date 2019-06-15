@@ -20,6 +20,7 @@ export class FakeEuroJackpotService {
 // Mocked filled just with the mandatory data
 export const mockWinnersResponse = {
   last: {
+    currency: 'EUR',
     date: {
       day: 10,
       month: 6,

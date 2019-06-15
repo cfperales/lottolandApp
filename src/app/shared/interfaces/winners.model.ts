@@ -1,7 +1,8 @@
 export interface OddModelInterface {
-  winners: number;
-  specialPrize: number;
-  prize: number;
-  tier: string;
+  currency: string;
   match: string;
+  prize: number;
+  specialPrize: number;
+  tier: string;
+  winners: number;
 }

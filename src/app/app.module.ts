@@ -8,14 +8,16 @@ import {KeysPipe} from './pipes/keys.pipe';
 import {NumberComponent} from './components/number/number.component';
 import {TableRowComponent} from './components/table-row/table-row.component';
 import {EuroJackpotService} from './services/euro-jackpot.service';
+import { FormatPrizePipe } from './pipes/format-prize.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PanelComponent,
     KeysPipe,
     NumberComponent,
+    PanelComponent,
     TableRowComponent,
+    FormatPrizePipe,
   ],
   imports: [
     BrowserModule,
